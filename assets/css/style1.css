@@ -360,9 +360,16 @@ body {
     width: 100%;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(0deg, rgb(68, 60, 49) 0%, rgb(71, 80, 138) 100%);
+    background: linear-gradient(0deg, rgb(68, 60, 49) 0%, rgb(27, 15, 92) 100%);
     padding: 0;
   }
+  .onelogo{
+
+  height: 100px;
+  width: 180px;
+  
+
+}
   
   #hero .carousel-container {
     display: flex;

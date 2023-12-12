@@ -117,7 +117,20 @@ h6 {
   margin: 0;
   max-height: 40px;
 }
+.onelogo{
 
+  height: 100px;
+  width: 180px;
+  
+
+}
+.twologo{
+  height: 100px;
+  width: 80px;
+}
+/* .image-fluid{
+  height: 60cm;
+} */
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -359,10 +372,10 @@ h6 {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(0deg, rgb(68, 60, 49) 0%, rgb(71, 80, 138) 100%);
+  background: linear-gradient(0deg, rgb(68, 60, 49) 0%, rgb(27, 15, 92) 100%);
   padding: 0;
 }
-
+/* linear-gradient(0deg, rgb(68, 60, 49) 0%, rgb(62, 71, 143) 100%) */
 #hero .carousel-container {
   display: flex;
   justify-content: center;
