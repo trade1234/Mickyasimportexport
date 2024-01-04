@@ -250,4 +250,27 @@
     })
   });
 
-})()
+})();
+
+function sendMail (){
+  var parms= {
+    name: document.getElementById("name").value ,
+    email: document.getElementById("email").value ,
+    message: document.getElementById("message").value ,
+
+  };
+  const serviceID= "service_reb7fza";
+const templateID= "template_ito9uze";
+emailjs.send(serviceID,templateID,params)
+.then(
+  res=> {
+    document.getElementById("name").value=" ";
+    document.getElementById("email").value=" ";
+    document.getElementById("message").value=" ";
+    console.log(res);
+    alert("your message sent succcessfully");
+
+  }
+)
+.catch((err)=> console.log(err));
+}
