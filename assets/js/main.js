@@ -249,28 +249,32 @@
       mirror: false
     })
   });
+  const contactForm = document.getElementById('contact-form'),
+        contactMessage = document.getElementById('contact-message')
 
+  const sendEmail = (e) =>{
+      e.preventDefault()
+
+              //serviceID - temeplet - #form - publickey
+
+      emailjs.sendForm("service_qfk6uru","template_ito9uze","#contact-form","57toDWL-ynwR4y1kZ")
+      .then(() =>{
+         // Show sent message 
+          contactMessage.textContent = 'Message sent successfully ✅'
+
+         // Remove message after five seconds
+          setTimeout(()=>{
+              contactMessage.textContent = ''
+          }, 5000)
+
+          //Clear input Fields
+          contactForm.reset()
+
+      }, () =>{
+          // Show error message
+          contactMessage.textContent= 'Message not sent (service error) ❌'
+        })
+    }
+    contactForm.addEventListener('submit', sendEmail)
 })();
 
-function sendMail (){
-  var parms= {
-    name: document.getElementById("name").value ,
-    email: document.getElementById("email").value ,
-    message: document.getElementById("message").value ,
-
-  };
-  const serviceID= "service_reb7fza";
-const templateID= "template_ito9uze";
-emailjs.send(serviceID,templateID,params)
-.then(
-  res=> {
-    document.getElementById("name").value=" ";
-    document.getElementById("email").value=" ";
-    document.getElementById("message").value=" ";
-    console.log(res);
-    alert("your message sent succcessfully");
-
-  }
-)
-.catch((err)=> console.log(err));
-}

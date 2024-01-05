@@ -126,7 +126,8 @@ body {
   * Desktop Navigation 
   */
   .navbar {
-    padding: 0;
+    padding: 0px;
+    /* height: 50PX; */
   }
   
   .navbar ul {
@@ -360,13 +361,16 @@ body {
     width: 100%;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(0deg, rgb(68, 60, 49) 0%, rgb(27, 15, 92) 100%);
+    /* background: linear-gradient(0deg, rgb(68, 60, 49) 0%, rgb(27, 15, 92) 100%); */
+    background: url("/assets/img/portfolio/8.jpg");
+    background-size: cover;
     padding: 0;
   }
   .onelogo{
 
-  height: 100px;
-  width: 180px;
+    height: 90px;
+    width: 120px;
+    margin-top: -5px;
   
 
 }
